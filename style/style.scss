@@ -22,6 +22,20 @@ $grey600: hsl(0%, 0%, 58%);
     cursor: pointer;
 }
 
+.transparent-button-mobile {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    @media only screen and (max-width: 50rem) {
+        display: flex;
+    }
+}
+
 .hero {
     display: flex;
     flex-direction: column;
@@ -36,6 +50,8 @@ $grey600: hsl(0%, 0%, 58%);
         background-image: url(../images/mobile/image-hero.jpg);
         padding-left: clamp(1rem, 6.667vw + -0.333rem, 3rem);
         padding-right: clamp(1rem, 6.667vw + -0.333rem, 3rem);
+        padding-bottom: clamp(4.5rem, -18.333vw + 13.667rem, 10rem);
+        gap: clamp(4.5rem, -18.333vw + 13.667rem, 10rem);
     }
 }
 
@@ -44,6 +60,12 @@ $grey600: hsl(0%, 0%, 58%);
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+
+.logo__img {
+    @media only screen and (max-width: 50rem) {
+        height: clamp(1.5rem, 1.667vw + 1.167rem, 2rem);
+    }
 }
 
 .navbar__categories {
@@ -77,6 +99,18 @@ $grey600: hsl(0%, 0%, 58%);
         transform: scaleX(1);
         transition: transform 250ms ease;
     }
+
+    @media only screen and (max-width: 50rem) {
+        display: none;
+    }
+}
+
+.menu__btn {
+    display: none;
+    @media only screen and (max-width: 50rem) {
+        display: flex;
+        height: 1.5rem;
+    }
 }
 
 .box {
@@ -101,7 +135,7 @@ $grey600: hsl(0%, 0%, 58%);
     font-weight: 300;
 
     @media only screen and (max-width: 50rem) {
-        font-size: clamp(2.5rem, 8.333vw + 0.833rem, 5rem);
+        font-size: clamp(2.125rem, 9.583vw + 0.208rem, 5rem);
     }
 }
 
@@ -114,6 +148,9 @@ $grey600: hsl(0%, 0%, 58%);
     @media only screen and (max-width: 50rem) {
         padding-left: clamp(1rem, 6.667vw + -0.333rem, 3rem);
         padding-right: clamp(1rem, 6.667vw + -0.333rem, 3rem);
+        padding-top: clamp(4.5rem, -5vw + 7rem, 6rem);
+        padding-bottom: clamp(4.5rem, -5vw + 7rem, 6rem);
+        gap: clamp(4.5rem, -5vw + 7rem, 6rem);
     }
 }
 
@@ -300,6 +337,46 @@ $grey600: hsl(0%, 0%, 58%);
     }
 }
 
+.creations__footer {
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    @media only screen and (max-width: 50rem) {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.creations__see-all-button-mobile {
+    display: none;
+    font-family: 'Alata', sans-serif;
+    text-transform: uppercase;
+    font-size: clamp(1rem, 0.288vw + 0.856rem, 1.2rem);
+    font-weight: 400;
+    letter-spacing: 0.2rem;
+    border: solid 1px $black;
+    background-color: $white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    padding: 0.5rem 2rem 0.5rem 2rem;
+    cursor: pointer;
+    transition: 200ms all ease-out;
+
+    @media only screen and (max-width: 50rem) {
+        display: flex;
+    }
+}
+
+.creations__see-all-button-mobile:hover {
+    background-color: $black;
+    color: $white;
+    transition: 200ms all ease-in;
+}
+
 .footer {
     display: flex;
     flex-direction: row;
@@ -310,6 +387,7 @@ $grey600: hsl(0%, 0%, 58%);
 
     @media only screen and (max-width: 50rem) {
         flex-direction: column;
+        gap: 1rem;
     }
 }
 
@@ -407,4 +485,9 @@ $grey600: hsl(0%, 0%, 58%);
     font-family: 'Alata', sans-serif;
     font-size: clamp(1rem, 0.18vw + 0.91rem, 1.125rem);
     color: $grey600;
+
+    @media only screen and (max-width: 50rem) {
+        font-size: clamp(0.875rem, 0.833vw + 0.708rem, 1.125rem);
+        text-align: center;
+    }
 }
